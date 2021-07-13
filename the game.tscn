@@ -1,0 +1,254 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://script/mane menu butten.gd" type="Script" id=1]
+[ext_resource path="res://script/the game.gd" type="Script" id=2]
+[ext_resource path="res://person.tscn" type="PackedScene" id=3]
+[ext_resource path="res://script/home of death.gd" type="Script" id=4]
+[ext_resource path="res://death incarnit .tscn" type="PackedScene" id=5]
+[ext_resource path="res://script/game_over.gd" type="Script" id=6]
+[ext_resource path="res://script/the pro.gd" type="Script" id=7]
+[ext_resource path="res://script/pro_death .gd" type="Script" id=8]
+[ext_resource path="res://wepons.gd" type="Script" id=9]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 46.2555, 10 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 16.1085, 963.382 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 677.463, 10 )
+
+[node name="The Game" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 3.38299
+margin_top = 0.00364089
+margin_right = 3.38306
+margin_bottom = 0.00366211
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 1255.0
+margin_bottom = 713.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="person2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 613.991, 670.177 )
+
+[node name="game_over" type="Area2D" parent="person2" groups=[
+"game_over",
+]]
+position = Vector2( -3.284, -148.431 )
+script = ExtResource( 6 )
+scene_to_load = "res://you_loss.tscn"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="person2/game_over"]
+position = Vector2( 1.62391, 165.203 )
+shape = SubResource( 1 )
+
+[node name="HUD" type="VBoxContainer" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Leave" type="Button" parent="HUD"]
+margin_right = 49.0
+margin_bottom = 20.0
+text = "Leave"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+scene_to_load = "res://Title.tscn"
+
+[node name="left_border" type="Area2D" parent="." groups=[
+"left",
+]]
+position = Vector2( -5.55188, 360.871 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="left_border"]
+position = Vector2( 11.3604, 0 )
+shape = SubResource( 2 )
+
+[node name="right_border" type="Area2D" parent="." groups=[
+"right",
+]]
+position = Vector2( 1276.93, 362.722 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="right_border"]
+position = Vector2( -11.0361, 0.323973 )
+shape = SubResource( 2 )
+
+[node name="top_border" type="KinematicBody2D" parent="." groups=[
+"top",
+]]
+position = Vector2( 640.899, -1.94797 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="top_border"]
+position = Vector2( -8.76416, -0.983223 )
+shape = SubResource( 3 )
+
+[node name="home of death" type="Node2D" parent="."]
+script = ExtResource( 4 )
+
+[node name="death incarnit " parent="home of death" instance=ExtResource( 5 )]
+position = Vector2( -62.8468, 111.423 )
+
+[node name="death incarnit 2" parent="home of death" instance=ExtResource( 5 )]
+position = Vector2( 15.0742, 111.423 )
+
+[node name="death incarnit 4" parent="home of death" instance=ExtResource( 5 )]
+position = Vector2( 92.995, 111.423 )
+
+[node name="death incarnit 3" parent="home of death" instance=ExtResource( 5 )]
+position = Vector2( 170.916, 111.423 )
+
+[node name="death incarnit 8" parent="home of death" instance=ExtResource( 5 )]
+position = Vector2( 248.837, 111.423 )
+
+[node name="death incarnit 7" parent="home of death" instance=ExtResource( 5 )]
+position = Vector2( 326.758, 111.423 )
+
+[node name="death incarnit 6" parent="home of death" instance=ExtResource( 5 )]
+position = Vector2( 404.679, 111.423 )
+
+[node name="death incarnit 5" parent="home of death" instance=ExtResource( 5 )]
+position = Vector2( 482.6, 111.423 )
+
+[node name="death incarnit 12" parent="home of death" instance=ExtResource( 5 )]
+position = Vector2( 558.572, 111.423 )
+
+[node name="death incarnit 11" parent="home of death" instance=ExtResource( 5 )]
+position = Vector2( 636.493, 111.423 )
+
+[node name="death incarnit 10" parent="home of death" instance=ExtResource( 5 )]
+position = Vector2( 714.414, 111.423 )
+
+[node name="death incarnit 9" parent="home of death" instance=ExtResource( 5 )]
+position = Vector2( 792.335, 111.423 )
+
+[node name="death incarnit 24" parent="home of death" instance=ExtResource( 5 )]
+position = Vector2( -62.8468, 191.292 )
+
+[node name="death incarnit 23" parent="home of death" instance=ExtResource( 5 )]
+position = Vector2( 15.0742, 191.292 )
+
+[node name="death incarnit 22" parent="home of death" instance=ExtResource( 5 )]
+position = Vector2( 92.995, 191.292 )
+
+[node name="death incarnit 21" parent="home of death" instance=ExtResource( 5 )]
+position = Vector2( 170.916, 191.292 )
+
+[node name="death incarnit 20" parent="home of death" instance=ExtResource( 5 )]
+position = Vector2( 248.837, 191.292 )
+
+[node name="death incarnit 19" parent="home of death" instance=ExtResource( 5 )]
+position = Vector2( 326.758, 191.292 )
+
+[node name="death incarnit 18" parent="home of death" instance=ExtResource( 5 )]
+position = Vector2( 404.679, 191.292 )
+
+[node name="death incarnit 17" parent="home of death" instance=ExtResource( 5 )]
+position = Vector2( 482.6, 191.292 )
+
+[node name="death incarnit 16" parent="home of death" instance=ExtResource( 5 )]
+position = Vector2( 558.572, 191.292 )
+
+[node name="death incarnit 15" parent="home of death" instance=ExtResource( 5 )]
+position = Vector2( 636.493, 191.292 )
+
+[node name="death incarnit 14" parent="home of death" instance=ExtResource( 5 )]
+position = Vector2( 714.414, 191.292 )
+
+[node name="death incarnit 13" parent="home of death" instance=ExtResource( 5 )]
+position = Vector2( 792.335, 191.292 )
+
+[node name="death incarnit 36" parent="home of death" instance=ExtResource( 5 )]
+position = Vector2( -62.8468, 275.057 )
+
+[node name="death incarnit 35" parent="home of death" instance=ExtResource( 5 )]
+position = Vector2( 15.0742, 275.057 )
+
+[node name="death incarnit 34" parent="home of death" instance=ExtResource( 5 )]
+position = Vector2( 92.995, 275.057 )
+
+[node name="death incarnit 33" parent="home of death" instance=ExtResource( 5 )]
+position = Vector2( 170.916, 275.057 )
+
+[node name="death incarnit 32" parent="home of death" instance=ExtResource( 5 )]
+position = Vector2( 248.837, 275.057 )
+
+[node name="death incarnit 31" parent="home of death" instance=ExtResource( 5 )]
+position = Vector2( 326.758, 275.057 )
+
+[node name="death incarnit 30" parent="home of death" instance=ExtResource( 5 )]
+position = Vector2( 404.679, 275.057 )
+
+[node name="death incarnit 29" parent="home of death" instance=ExtResource( 5 )]
+position = Vector2( 482.6, 275.057 )
+
+[node name="death incarnit 28" parent="home of death" instance=ExtResource( 5 )]
+position = Vector2( 558.572, 275.057 )
+
+[node name="death incarnit 27" parent="home of death" instance=ExtResource( 5 )]
+position = Vector2( 636.493, 275.057 )
+
+[node name="death incarnit 26" parent="home of death" instance=ExtResource( 5 )]
+position = Vector2( 714.414, 275.057 )
+
+[node name="death incarnit 25" parent="home of death" instance=ExtResource( 5 )]
+position = Vector2( 792.335, 275.057 )
+
+[node name="death incarnit 48" parent="home of death" instance=ExtResource( 5 )]
+position = Vector2( -64.795, 358.822 )
+
+[node name="death incarnit 47" parent="home of death" instance=ExtResource( 5 )]
+position = Vector2( 13.1261, 358.822 )
+
+[node name="death incarnit 46" parent="home of death" instance=ExtResource( 5 )]
+position = Vector2( 91.0468, 358.822 )
+
+[node name="death incarnit 45" parent="home of death" instance=ExtResource( 5 )]
+position = Vector2( 168.968, 358.822 )
+
+[node name="death incarnit 44" parent="home of death" instance=ExtResource( 5 )]
+position = Vector2( 246.889, 358.822 )
+
+[node name="death incarnit 43" parent="home of death" instance=ExtResource( 5 )]
+position = Vector2( 324.81, 358.822 )
+
+[node name="death incarnit 42" parent="home of death" instance=ExtResource( 5 )]
+position = Vector2( 402.73, 358.822 )
+
+[node name="death incarnit 41" parent="home of death" instance=ExtResource( 5 )]
+position = Vector2( 480.651, 358.822 )
+
+[node name="death incarnit 40" parent="home of death" instance=ExtResource( 5 )]
+position = Vector2( 556.624, 358.822 )
+
+[node name="death incarnit 39" parent="home of death" instance=ExtResource( 5 )]
+position = Vector2( 634.545, 358.822 )
+
+[node name="death incarnit 38" parent="home of death" instance=ExtResource( 5 )]
+position = Vector2( 712.466, 358.822 )
+
+[node name="death incarnit 37" parent="home of death" instance=ExtResource( 5 )]
+position = Vector2( 790.387, 358.822 )
+
+[node name="the pro" type="Node2D" parent="."]
+script = ExtResource( 7 )
+
+[node name="pro_death" parent="the pro" instance=ExtResource( 5 )]
+position = Vector2( -185.539, -193.036 )
+script = ExtResource( 8 )
+
+[node name="wepons" type="Node2D" parent="."]
+script = ExtResource( 9 )

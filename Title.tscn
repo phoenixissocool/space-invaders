@@ -1,0 +1,159 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://Arizonia/Arizonia-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://script/mane menu butten.gd" type="Script" id=2]
+[ext_resource path="res://script/Title.gd" type="Script" id=3]
+[ext_resource path="res://image/space.jpg" type="Texture" id=4]
+[ext_resource path="res://Arizonia/Zen_Dots/Rajdhani/Rajdhani-Light.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://Arizonia/Zen_Dots/ZenDots-Regular.ttf" type="DynamicFontData" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+size = 100
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 30
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 30
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 30
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 60
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 60
+font_data = ExtResource( 5 )
+
+[node name="Title" type="Control"]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 1282.0
+margin_bottom = 723.0
+texture = ExtResource( 4 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="menu" type="VBoxContainer" parent="."]
+margin_left = 116.985
+margin_top = 81.5073
+margin_right = 1166.99
+margin_bottom = 640.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="title " type="HBoxContainer" parent="menu"]
+margin_right = 1050.0
+margin_bottom = 120.0
+
+[node name="Label" type="Label" parent="menu/title "]
+margin_right = 982.0
+margin_bottom = 120.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.843137, 0.105882, 0.105882, 1 )
+custom_colors/font_outline_modulate = Color( 0.0784314, 0.0705882, 0.0784314, 1 )
+custom_colors/font_color_shadow = Color( 0.0431373, 0.0392157, 0.0431373, 1 )
+text = "Inspector frank"
+
+[node name="main" type="HBoxContainer" parent="menu"]
+margin_top = 124.0
+margin_right = 1050.0
+margin_bottom = 339.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Buttons" type="VBoxContainer" parent="menu/main"]
+margin_right = 1050.0
+margin_bottom = 215.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="new game" type="Button" parent="menu/main/Buttons"]
+margin_right = 1050.0
+margin_bottom = 69.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color_disabled = Color( 0.0509804, 0.0470588, 0.0470588, 1 )
+custom_colors/font_color = Color( 0.0980392, 0.584314, 0.823529, 1 )
+shortcut_in_tooltip = false
+text = "New Game"
+flat = true
+align = 0
+script = ExtResource( 2 )
+scene_to_load = "cut 1.tscn"
+
+[node name="the help" type="Button" parent="menu/main/Buttons"]
+margin_top = 73.0
+margin_right = 1050.0
+margin_bottom = 142.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.8, 0.0666667, 0.0666667, 1 )
+custom_colors/font_color_hover = Color( 0.701961, 0.0666667, 0.0666667, 1 )
+text = "The Help"
+flat = true
+align = 0
+script = ExtResource( 2 )
+scene_to_load = "the_help.tscn"
+
+[node name="leave" type="Button" parent="menu/main/Buttons"]
+margin_top = 146.0
+margin_right = 1050.0
+margin_bottom = 215.0
+size_flags_horizontal = 15
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0.803922, 0.819608, 0.14902, 1 )
+text = "Leave"
+flat = true
+align = 0
+script = ExtResource( 2 )
+
+[node name="app info" type="HBoxContainer" parent="menu"]
+margin_top = 343.0
+margin_right = 1050.0
+margin_bottom = 558.0
+size_flags_vertical = 3
+
+[node name="ver" type="Label" parent="menu/app info"]
+margin_top = 70.0
+margin_right = 523.0
+margin_bottom = 145.0
+size_flags_horizontal = 3
+size_flags_vertical = 6
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0.121569, 0.780392, 0.0823529, 1 )
+custom_colors/font_outline_modulate = Color( 0.333333, 0.831373, 0.105882, 1 )
+custom_colors/font_color_shadow = Color( 0.0588235, 0.815686, 0.815686, 1 )
+text = "0.1"
+
+[node name="dev" type="Label" parent="menu/app info"]
+margin_left = 527.0
+margin_top = 69.0
+margin_right = 1050.0
+margin_bottom = 146.0
+size_flags_horizontal = 3
+size_flags_vertical = 6
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 0.219608, 0.882353, 0.196078, 1 )
+custom_colors/font_outline_modulate = Color( 0.321569, 0.862745, 0.14902, 1 )
+custom_colors/font_color_shadow = Color( 0.109804, 0.596078, 0.858824, 1 )
+text = "Phoenix Coleman"
+[connection signal="pressed" from="menu/main/Buttons/leave" to="menu/main/Buttons/leave" method="_on_leave_pressed"]

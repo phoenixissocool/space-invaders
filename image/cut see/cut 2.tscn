@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://script/Button.gd" type="Script" id=1]
+[ext_resource path="res://image/cut see/cut 1.gd" type="Script" id=2]
+
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 1285.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HUD" type="VBoxContainer" parent="."]
+margin_right = 1285.0
+margin_bottom = 724.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="HUD"]
+margin_right = 1285.0
+margin_bottom = 724.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = ";hkuikikikk"
+script = ExtResource( 1 )
+scene_to_load = "res://cut 3.tscn"

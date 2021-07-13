@@ -1,0 +1,53 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Arizonia/Arizonia-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://script/Button.gd" type="Script" id=2]
+[ext_resource path="res://script/the_help.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 20
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 100
+font_data = ExtResource( 1 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HUD" type="HBoxContainer" parent="."]
+margin_left = -1.948
+margin_top = 1.94806
+margin_right = 1280.05
+margin_bottom = 721.948
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="HUD"]
+margin_right = 156.0
+margin_bottom = 31.0
+size_flags_vertical = 0
+custom_fonts/font = SubResource( 1 )
+text = "Return to main menu"
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+scene_to_load = "Title.tscn"
+
+[node name="Label" type="Label" parent="."]
+margin_left = 422.606
+margin_top = 293.098
+margin_right = 789.606
+margin_bottom = 418.098
+custom_fonts/font = SubResource( 2 )
+text = "Call 000"
+__meta__ = {
+"_edit_use_anchors_": false
+}
